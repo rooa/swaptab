@@ -18,13 +18,13 @@
         "right":{
             "description": "Swap a tab to the right",
             "suggested_key": {
-                "default": "Command+Shift+L"
+                "default": "Ctrl+Shift+L"
             }
         },
         "left":{
             "description": "Swap a tab to the left",
             "suggested_key": {
-                "default": "Command+Shift+H"
+                "default": "Ctrl+Shift+H"
             }
         }
     }
