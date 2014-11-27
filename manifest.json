@@ -1,0 +1,31 @@
+{
+    "name": "swaptab",
+    "version": "0.1",
+    "manifest_version":2,
+
+    "description": "Swap adjacent tabs",
+
+    "permissions":[
+        "tabs"
+    ],
+
+
+    "background":{
+        "scripts": ["background.js"]
+    },
+
+    "commands":{
+        "right":{
+            "description": "Swap a tab to the right",
+            "suggested_key": {
+                "default": "MacCtrl+L"
+            }
+        },
+        "left":{
+            "description": "Swap a tab to the left",
+            "suggested_key": {
+                "default": "MacCtrl+H"
+            }
+        }
+    }
+}
