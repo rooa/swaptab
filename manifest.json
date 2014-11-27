@@ -18,13 +18,13 @@
         "right":{
             "description": "Swap a tab to the right",
             "suggested_key": {
-                "default": "MacCtrl+L"
+                "default": "Alt+L"
             }
         },
         "left":{
             "description": "Swap a tab to the left",
             "suggested_key": {
-                "default": "MacCtrl+H"
+                "default": "Alt+H"
             }
         }
     }
