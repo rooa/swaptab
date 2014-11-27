@@ -11,6 +11,7 @@ This extension gets your current active tab's `ID` & `index`, then move it forwa
 ### Mac
 - `⌘⇧H` to move your tab *LEFT*
 - `⌘⇧L` to move your tab *RIGHT*
-### Windows
+
+### Linux & Windows
 - `Ctrl + Shift + H` to move your tab *LEFT*
 - `Ctrl + Shift + L` to move your tab *RIGHT*
