@@ -4,6 +4,8 @@ swaptab
 A chrome extension that performs tab-swapping by single command.
 
 ## What it does
+*No more mouse moving.*
+
 This extension gets your current active tab's `ID` & `index`, then move it forward or back.
 
 
@@ -15,3 +17,15 @@ This extension gets your current active tab's `ID` & `index`, then move it forwa
 ### Linux & Windows
 - `Ctrl + Shift + H` to move your tab *LEFT*
 - `Ctrl + Shift + L` to move your tab *RIGHT*
+
+
+## Options
+At the options page, you can choose either of the following.
+
+- `stop`
+
+Tabs you move will stop at the edge of the window.
+	
+- `circulate`
+
+Tabs you move will circulate inside the window.
