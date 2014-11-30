@@ -6,7 +6,7 @@
     "description": "Swap adjacent tabs",
 
     "permissions":[
-        "tabs"
+        "tabs","storage"
     ],
 
 
@@ -14,7 +14,7 @@
         "scripts": ["background.js"]
     },
 
-    "option_pages": "options.html",
+    "options_page": "options.html",
 
     "commands":{
         "right":{

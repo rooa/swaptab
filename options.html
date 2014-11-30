@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <meta charset='utf-8'>
   <title>option for swaptab</title>
-  <script src='./jquery.js'></script>
-  <link rel='stylesheet' type='text/css' href='./css/materialize.min.css'  />
-  <link rel='stylesheet' type='text/css' href='./css/options.css' />
-
+<script src="jquery-2.1.1.min.js"></script>
+<script src="options.js"></script>
 </head>
 <body>
   <div style="font-family:futura">
     <h1>Select your preference</h1>
-    <form id='select_transition_mode'>
+    <form name ='form1' id='select_transition_mode'>
       <h4>When you move your tab to the edge, you want it to </h4><br>
-      <input type='radio' id='stop' > STOP still
-      <br>
-      <input type='radio' id='circulate' > CIRCULATE to the other side
+      <p>
+        <input type='radio' name='mode' value ="stop" checked> STOP still
+        <br>
+        <input type='radio' name='mode' value="circulate" > CIRCULATE to the other side
+
+        <input type='button' id='submit' name='submit' value="Change!!" style='font-family:futura'>
+      </p>
     </form>
   </div>
 </body>
