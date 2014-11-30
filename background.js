@@ -40,7 +40,6 @@ chrome.tabs.onActivated.addListener(function(activeInfo) {
     });
     chrome.tabs.getAllInWindow(function(array_tab){
         _max = array_tab.length;
-        console.log("#tabs = " + _max);
     });
 })
 
@@ -52,17 +51,14 @@ chrome.tabs.onMoved.addListener(function(){
 
 chrome.storage.onChanged.addListener(function(changes){
     mode = changes['mode'].newValue;
-    console.log("mode changed to :"+ mode);
 })
 
 
 chrome.commands.onCommand.addListener(function(command) {
     if (mode == "stop"){
-        console.log("swap_stop");
         swap_stop(command);
     }
     else if (mode == "circulate"){
-        console.log("swap_circulate");
         swap_circulate(command);
     }
 })
