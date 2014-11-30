@@ -1,6 +1,9 @@
 var id = -1;
 var index = -1;
 var _max = -1;
+var mode = "stop";
+
+chrome.storage.local.set({"mode":mode});
 
 function swap_stop(direction){
     if (direction == "right" && index < _max - 1){
@@ -37,6 +40,7 @@ chrome.tabs.onActivated.addListener(function(activeInfo) {
     });
     chrome.tabs.getAllInWindow(function(array_tab){
         _max = array_tab.length;
+        console.log("#tabs = " + _max);
     });
 })
 
@@ -46,7 +50,19 @@ chrome.tabs.onMoved.addListener(function(){
     });
 })
 
-chrome.commands.onCommand.addListener(function(command) {
+chrome.storage.onChanged.addListener(function(changes){
+    mode = changes['mode'].newValue;
+    console.log("mode changed to :"+ mode);
+})
 
-    swap_stop(command);
+
+chrome.commands.onCommand.addListener(function(command) {
+    if (mode == "stop"){
+        console.log("swap_stop");
+        swap_stop(command);
+    }
+    else if (mode == "circulate"){
+        console.log("swap_circulate");
+        swap_circulate(command);
+    }
 })
