@@ -28,6 +28,12 @@
             "suggested_key": {
                 "default": "Ctrl+Shift+H"
             }
+        },
+        "rightmost":{
+            "description": "Move the tab to the rightmost",
+            "suggested_key": {
+                "default": "Ctrl+Shift+9"
+            }
         }
     }
 }

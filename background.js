@@ -12,6 +12,9 @@ function swap_stop(direction){
     else if (direction == "left" && index > 0){
         chrome.tabs.move(id,{"index":index-1});
     }
+    else if (direction == "rightmost"){
+        chrome.tabs.move(id,{"index":_max-1});
+    }
 }
 
 function swap_circulate(direction){
@@ -31,10 +34,9 @@ function swap_circulate(direction){
             chrome.tabs.move(id,{"index":_max-1});
         }
     }
-}
-
-function move_rightmost(){
-  chrome.tabs.move(id,{"index":_max-1});
+    else if (direction == "rightmost"){
+      chrome.tabs.move(id,{"index":_max-1});
+    }
 }
 
 
