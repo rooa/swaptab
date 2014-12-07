@@ -33,6 +33,11 @@ function swap_circulate(direction){
     }
 }
 
+function move_rightmost(){
+  chrome.tabs.move(id,{"index":_max-1});
+}
+
+
 chrome.tabs.onActivated.addListener(function(activeInfo) {
     id = activeInfo.tabId;
     chrome.tabs.get(id,function(tab){
