@@ -57,8 +57,12 @@ chrome.tabs.onActivated.addListener(function(activeInfo) {
     chrome.tabs.get(id, function(tab) {
         index = tab.index;
     });
-    chrome.tabs.getAllInWindow(function(array_tab) {
-        _max = array_tab.length;
+    // Get number of windows.
+    chrome.windows.getCurrent(function(window){
+        windowId = window.id;
+        chrome.tabs.query({"windowId": windowId}, function(tabs) {
+            _max = tabs.length;
+        });
     });
 })
 
