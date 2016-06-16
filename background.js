@@ -2,7 +2,7 @@ var id = -1;
 var index = -1;
 var _max = -1;
 var _min = 0;
-var mode = "stop";
+var mode = "circulate";
 
 chrome.storage.local.set({
     "mode": mode
