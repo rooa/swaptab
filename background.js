@@ -1,6 +1,7 @@
 var id = -1;
 var index = -1;
 var _max = -1;
+var _min = 0;
 var mode = "stop";
 
 chrome.storage.local.set({
@@ -12,7 +13,7 @@ function swap_stop(direction) {
         chrome.tabs.move(id, {
             "index": index + 1
         });
-    } else if (direction == "left" && index > 0) {
+    } else if (direction == "left" && index > _min) {
         chrome.tabs.move(id, {
             "index": index - 1
         });
@@ -31,15 +32,15 @@ function swap_circulate(direction) {
             });
         } else if (index == _max - 1) {
             chrome.tabs.move(id, {
-                "index": 0
+                "index": _min
             });
         }
     } else if (direction == "left") {
-        if (index > 0) {
+        if (index > _min) {
             chrome.tabs.move(id, {
                 "index": index - 1
             });
-        } else if (index == 0) {
+        } else if (index == _min) {
             chrome.tabs.move(id, {
                 "index": _max - 1
             });
@@ -62,6 +63,9 @@ chrome.tabs.onActivated.addListener(function(activeInfo) {
         windowId = window.id;
         chrome.tabs.query({"windowId": windowId}, function(tabs) {
             _max = tabs.length;
+        });
+        chrome.tabs.query({"pinned": true}, function(tabs) {
+            _min = tabs.length;
         });
     });
 })
