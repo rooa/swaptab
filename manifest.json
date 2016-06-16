@@ -35,5 +35,8 @@
                 "default": "Ctrl+Shift+9"
             }
         }
+    },
+    "icons":{
+        "128": "icon.png"
     }
 }
