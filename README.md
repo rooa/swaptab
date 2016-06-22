@@ -1,4 +1,6 @@
-swaptab
+![](icon.png)
+
+swaptab 
 =======
 
 A chrome extension that performs tab-swapping by single command.
