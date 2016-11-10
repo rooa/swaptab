@@ -5,6 +5,9 @@ swaptab
 
 A chrome extension that performs tab-swapping by single command.
 
+## Install
+Download from [here](https://chrome.google.com/webstore/detail/swaptab/bjkpodgglglkjgekfponknjgnegaigcn).
+
 ## What it does
 *No more mouse moving.*
 
